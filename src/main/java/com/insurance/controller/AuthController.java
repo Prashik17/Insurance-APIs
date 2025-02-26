@@ -7,14 +7,20 @@ import com.insurance.model.User;
 import com.insurance.repository.UserRepository;
 import com.insurance.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 
 @RestController
@@ -44,10 +50,25 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public AuthenticationResponse login(@RequestBody AuthenticationRequest authRequest) throws Exception{
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-        final UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
-        final String jwt = jwtUtil.generateToken(userDetails);
-        return new AuthenticationResponse(jwt);
-    };
+    public AuthenticationResponse login(@RequestBody AuthenticationRequest authRequest) {
+        try {
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
+            );
+
+            final UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
+            final String jwt = jwtUtil.generateToken(userDetails);
+
+            System.out.println("✅ User Logged In: " + authRequest.getUsername());
+
+            return new AuthenticationResponse(jwt);
+
+        } catch (UsernameNotFoundException e) {
+            System.out.println("❌ User Not Found: " + authRequest.getUsername());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found", e);
+        } catch (Exception e) {
+            System.out.println("❌ Invalid Credentials for user: " + authRequest.getUsername());
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials", e);
+        }
+    }
 }
