@@ -49,6 +49,30 @@ public class AuthController {
         return "User registered successfully";
     }
 
+//    @PostMapping("/login")
+//    public AuthenticationResponse login(@RequestBody AuthenticationRequest authRequest) {
+//        try {
+//            authenticationManager.authenticate(
+//                    new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
+//            );
+//
+//            final UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
+//            final String jwt = jwtUtil.generateToken(userDetails);
+//
+//            System.out.println("✅ User Logged In: " + authRequest.getUsername());
+//           // System.out.println("✅ User Logged In: " + authRequest.getUsername());
+//
+//            return new AuthenticationResponse(jwt);
+//
+//        } catch (UsernameNotFoundException e) {
+//            System.out.println("❌ User Not Found: " + authRequest.getUsername());
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found", e);
+//        } catch (Exception e) {
+//            System.out.println("❌ Invalid Credentials for user: " + authRequest.getUsername());
+//            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials", e);
+//        }
+//    }
+
     @PostMapping("/login")
     public AuthenticationResponse login(@RequestBody AuthenticationRequest authRequest) {
         try {
@@ -56,10 +80,15 @@ public class AuthController {
                     new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
             );
 
+            // Fetch user from database to get ID along with username
+            User user = userRepository.findByUsername(authRequest.getUsername())
+                    .orElseThrow(() -> new UsernameNotFoundException("User not found: " + authRequest.getUsername()));
+
             final UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
             final String jwt = jwtUtil.generateToken(userDetails);
 
-            System.out.println("✅ User Logged In: " + authRequest.getUsername());
+            // Print user ID and username
+            System.out.println("✅ User Logged In: ID = " + user.getId() + ", Username = " + user.getUsername());
 
             return new AuthenticationResponse(jwt);
 
@@ -71,4 +100,5 @@ public class AuthController {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials", e);
         }
     }
+
 }

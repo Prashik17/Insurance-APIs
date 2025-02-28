@@ -1,8 +1,17 @@
 package com.insurance.model;
 
 public class AuthenticationRequest {
+    private Long Id;
     private String username;
     private String password;
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
 
     public String getUsername() {
         return username;
