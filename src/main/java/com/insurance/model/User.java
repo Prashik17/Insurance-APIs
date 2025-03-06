@@ -1,5 +1,7 @@
 package com.insurance.model;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -11,6 +13,9 @@ public class User {
     private String username;
     private String password;
     private String role;
+    
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Vehicle> vehicles;
 
     public Long getId() {
         return id;
@@ -42,5 +47,12 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 }

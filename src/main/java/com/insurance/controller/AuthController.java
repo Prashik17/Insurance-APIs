@@ -4,10 +4,16 @@ import com.insurance.config.JwtUtil;
 import com.insurance.model.AuthenticationRequest;
 import com.insurance.model.AuthenticationResponse;
 import com.insurance.model.User;
+import com.insurance.model.Vehicle;
 import com.insurance.repository.UserRepository;
 import com.insurance.service.UserService;
+import com.insurance.service.VehicleService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +21,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -25,6 +32,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/auth")
+
 public class AuthController {
 
     @Autowired
@@ -41,6 +49,13 @@ public class AuthController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+    
+    @Autowired
+    private VehicleService vehicleService;
+
+    
+    
+
 
     @PostMapping("/register")
     public String registerUser(@RequestBody User user){
