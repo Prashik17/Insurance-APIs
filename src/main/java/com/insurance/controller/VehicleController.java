@@ -48,7 +48,7 @@ public class VehicleController {
         return ResponseEntity.ok("Vehicle registered successfully!");
     }
 
-    @GetMapping("/all")
+    @GetMapping("/all") //get all vehicales
     public ResponseEntity<List<Vehicle>> getAllVehicles(@RequestHeader("Authorization") String token) {
         Long userId = jwtUtil.extractUserId(token.substring(7));
         return ResponseEntity.ok(vehicleService.getAllVehiclesByUserId(userId));
