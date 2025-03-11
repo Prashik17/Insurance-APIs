@@ -1,0 +1,63 @@
+2025-03-07T18:25:42.875+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .i.SampleVehicalInsuranceProjApplication : Starting SampleVehicalInsuranceProjApplication using Java 21.0.5 with PID 1704 (C:\spring\SampleVehicalInsuranceProj\target\classes started by USER_local in C:\spring\SampleVehicalInsuranceProj)
+2025-03-07T18:25:42.899+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .i.SampleVehicalInsuranceProjApplication : No active profile set, falling back to 1 default profile: "default"
+2025-03-07T18:25:43.185+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-07T18:25:43.187+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-07T18:25:45.912+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-07T18:25:46.134+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 1 JPA repository interface.
+2025-03-07T18:25:48.198+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-03-07T18:25:48.255+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-07T18:25:48.257+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-07T18:25:48.434+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-07T18:25:48.436+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5245 ms
+2025-03-07T18:25:49.044+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-07T18:25:49.249+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-07T18:25:49.375+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-07T18:25:50.357+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-07T18:25:50.474+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-07T18:25:51.959+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1847fab7
+2025-03-07T18:25:51.968+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-07T18:25:52.202+05:30  WARN 1704 --- [SampleVehicalInsuranceProj] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-07T18:25:52.207+05:30  WARN 1704 --- [SampleVehicalInsuranceProj] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-07T18:25:52.311+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-07T18:25:55.372+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-07T18:25:55.621+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T18:25:57.032+05:30  WARN 1704 --- [SampleVehicalInsuranceProj] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-07T18:25:57.421+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-03-07T18:25:57.884+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-07T18:25:58.010+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-07T18:25:58.187+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-07T18:25:58.535+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-07T18:25:58.736+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-03-07T18:25:58.791+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [restartedMain] .i.SampleVehicalInsuranceProjApplication : Started SampleVehicalInsuranceProjApplication in 17.491 seconds (process running for 20.164)
+2025-03-07T18:32:57.891+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-07T18:32:57.892+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-07T18:32:57.893+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-03-07T18:32:57.893+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-03-07T18:32:57.894+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-03-07T18:32:57.897+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@54e314a8
+2025-03-07T18:32:57.901+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1a9b3f0a
+2025-03-07T18:32:57.902+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-03-07T18:32:57.903+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2025-03-07T18:32:57.929+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/bills/4", parameters={}
+2025-03-07T18:32:57.970+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.BillController#getBillById(Long)
+2025-03-07T18:32:58.369+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-07T18:32:58.378+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Bill [billId=4, userId=5, vehicleId=151, policyId=252, amount=25000.75, paymentStatus=FAILED, create (truncated)...]
+2025-03-07T18:32:58.427+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-07T18:33:06.810+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/bills/5", parameters={}
+2025-03-07T18:33:06.812+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.insurance.controller.BillController#getBillById(Long)
+2025-03-07T18:33:06.837+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-07T18:33:06.839+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Bill [billId=5, userId=6, vehicleId=111, policyId=777, amount=1177000.75, paymentStatus=PENDING, cre (truncated)...]
+2025-03-07T18:33:06.843+05:30 DEBUG 1704 --- [SampleVehicalInsuranceProj] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-07T19:26:48.979+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [RMI TCP Connection(63)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-07T19:26:48.992+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [RMI TCP Connection(63)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-07T19:26:49.017+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-07T19:26:49.034+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [RMI TCP Connection(63)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-07T19:26:49.045+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [RMI TCP Connection(63)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-07T19:26:49.067+05:30  INFO 1704 --- [SampleVehicalInsuranceProj] [RMI TCP Connection(63)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

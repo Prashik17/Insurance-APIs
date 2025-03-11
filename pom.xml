@@ -9,9 +9,15 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
+<<<<<<< HEAD
 	<artifactId>VehicalinsurencePremium</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>VehicalinsurencePremium</name>
+=======
+	<artifactId>SampleVehicalInsuranceProj</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SampleVehicalInsuranceProj</name>
+>>>>>>> origin/Arunbranch
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
